@@ -34,7 +34,6 @@ html, body {
   :root {
     --color-primary: #3D6FB4;
     --color-on-primary: white;
-    --color-on-primary-variant: white;
     --contrast-percent: calc(var(--contrast, 0) * 1%);
     --color-background: hsla(0deg 0% calc(11% - var(--contrast-percent)));
     --color-on-background: rgba(255, 255, 255, .50);
@@ -70,7 +69,6 @@ html, body {
 .labs-dark-theme {
   --color-primary: #3D6FB4;
   --color-on-primary: white;
-  --color-on-primary-variant: white;
   --contrast-percent: calc(var(--contrast, 0) * 1%);
   --color-background: hsla(0deg 0% calc(11% - var(--contrast-percent)));
   --color-on-background: rgba(255, 255, 255, .50);
@@ -115,7 +113,6 @@ html, body {
   :root {
     --color-primary: #3D6FB4;
     --color-on-primary: white;
-    --color-on-primary-variant: white;
     --contrast-percent: calc(var(--contrast, 0) * 1%);
     --color-background: hsl(225deg 22% calc(96% + var(--contrast-percent)));
     --color-on-background: hsl(0, 0%, 40%);
@@ -151,7 +148,6 @@ html, body {
 .labs-light-theme {
   --color-primary: #3D6FB4;
   --color-on-primary: white;
-  --color-on-primary-variant: white;
   --contrast-percent: calc(var(--contrast, 0) * 1%);
   --color-background: hsl(225deg 22% calc(96% + var(--contrast-percent)));
   --color-on-background: hsl(0, 0%, 40%);
