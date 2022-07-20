@@ -3,7 +3,6 @@
 @mixin theme {
   --color-primary: #3D6FB4;
   --color-on-primary: white;
-  --color-on-primary-variant: white;
 
   --contrast-percent: calc(var(--contrast, 0) * 1%);
 

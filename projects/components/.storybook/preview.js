@@ -52,6 +52,11 @@ export const parameters = {
   viewport: {
     viewports,
   },
+  options: {
+    storySort: {
+      order: ['Layouts', 'Core', 'Components'],
+    },
+  },
 }
 
 /**

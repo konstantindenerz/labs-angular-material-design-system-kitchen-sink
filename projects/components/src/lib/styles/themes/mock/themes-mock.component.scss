@@ -1,0 +1,46 @@
+@use 'elevation';
+
+@mixin cell {
+  min-height: 2rem;
+  display: flex;
+  align-items: center;
+  padding: var(--gap-s) var(--gap-m);
+  flex: .5;
+}
+
+strong {
+  white-space: nowrap;
+  padding-right: .5rem;
+}
+
+.key {
+  @include cell;
+  background-color: var(--color-surface);
+}
+
+.value {
+  @include cell;
+  width: 6rem;
+}
+
+.row {
+  display: flex;
+  align-items: stretch;
+  @include elevation.get(1);
+  border-radius: var(--border-radius-xl);
+  overflow: hidden;
+}
+
+.description {
+  background-color: var(--color-emphasis-1);
+  margin: 0 var(--gap-xl);
+  padding: var(--gap-m);
+  border-bottom-left-radius: var(--border-radius-m);
+  border-bottom-right-radius: var(--border-radius-m);
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}

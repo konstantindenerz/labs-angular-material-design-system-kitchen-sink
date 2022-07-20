@@ -1,0 +1,10 @@
+<ng-container *ngFor="let color of colors">
+  <div class="item">
+    <div class="row">
+      <div class="key"><strong>{{color.key}}:</strong>{{color.value}}</div>
+      <div class="value" [style.background-color]="'var(' + color.key + ')'">
+      </div>
+    </div>
+    <div class="description" *ngIf="color.description" [innerHTML]="color.description"></div>
+  </div>
+</ng-container>
