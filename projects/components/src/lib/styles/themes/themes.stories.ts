@@ -11,7 +11,7 @@ export default {
 } as Meta;
 
 const Template: Story<ThemesMockComponent> = (props: ThemesMockComponent) => ({
-  props,
+  props: {},
 });
 
 export const Default = Template.bind({});
