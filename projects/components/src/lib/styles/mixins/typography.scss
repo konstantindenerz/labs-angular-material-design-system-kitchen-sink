@@ -1,5 +1,7 @@
+@use 'sass:meta';
+
 @mixin display-l {
-  font: var(--typography-display-1-font-size) / 4rem Inter;
+  font: 3.5625rem / 4rem var(--font-family);
   letter-spacing: 0;
 }
 

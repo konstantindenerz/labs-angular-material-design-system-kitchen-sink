@@ -1,12 +1,14 @@
 import {Component, ElementRef, OnInit} from '@angular/core';
-import {ColorGroup, COLORS, GROUPS} from './color-mapping';
+import {ColorGroup, GROUPS} from './color-mapping';
 
+/**
+ * Use this class only for demonstration, not production.
+ */
 @Component({
   selector: 'themes-mock',
   templateUrl: 'themes-mock.component.html',
   styleUrls: ['themes-mock.component.scss']
 })
-
 export class ThemesMockComponent implements OnInit {
   readonly groups: ColorGroup[] = [];
 

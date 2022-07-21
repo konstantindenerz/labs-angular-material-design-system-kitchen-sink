@@ -1,0 +1,80 @@
+@use 'typography';
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-l);
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius-m);
+  padding: var(--gap-l);
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xl);
+}
+
+.display-large {
+  @include typography.display-l;
+}
+
+.display-medium {
+  @include typography.display-m;
+}
+
+.display-small {
+  @include typography.display-s;
+}
+
+.headline-large {
+  @include typography.headline-l;
+}
+
+.headline-medium {
+  @include typography.headline-m;
+}
+
+.headline-small {
+  @include typography.headline-s;
+}
+
+
+.title-large {
+  @include typography.title-l;
+}
+
+.title-medium {
+  @include typography.title-m;
+}
+
+.title-small {
+  @include typography.title-s;
+}
+
+
+.label-large {
+  @include typography.label-l;
+}
+
+.label-medium {
+  @include typography.label-m;
+}
+
+.label-small {
+  @include typography.label-s;
+}
+
+.body-large {
+  @include typography.body-l;
+}
+
+.body-medium {
+  @include typography.body-m;
+}
+
+.body-small {
+  @include typography.body-s;
+}
+
+
