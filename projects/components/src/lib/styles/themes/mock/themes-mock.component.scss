@@ -3,7 +3,7 @@
 @use 'typography';
 
 .label {
-  @include typography.display-s;
+  @include typography.title-l;
 }
 
 .items {
@@ -47,12 +47,13 @@
 
   &::before {
     $c: var(--color-emphasis-1);
-    background: linear-gradient(45deg, $c 25%, transparent 0),
-    linear-gradient(-45deg, $c 25%, transparent 0),
-    linear-gradient(45deg, transparent 75%, $c 0),
-    linear-gradient(-45deg, transparent 75%, $c 0);
-    background-size: 1rem 1rem;
-    background-position: 0 0, 0 .5rem, .5rem -.5rem, -.5rem 0;
+    $size: 1rem;
+    $halfSize: $size / 2;
+    background: linear-gradient(45deg, $c 25%, transparent 0) 0 0,
+    linear-gradient(-45deg, $c 25%, transparent 0) 0 $halfSize,
+    linear-gradient(45deg, transparent 75%, $c 0) $halfSize ($halfSize * -1),
+    linear-gradient(-45deg, transparent 75%, $c 0) ($halfSize * -1) 0;
+    background-size: $size $size;
     content: '';
     position: absolute;
     top: 0;
