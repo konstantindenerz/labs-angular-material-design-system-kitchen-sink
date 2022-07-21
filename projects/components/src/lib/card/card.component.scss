@@ -9,15 +9,12 @@
   position: relative;
   background-color: var(--color-surface);
   border-radius: var(--border-radius-m);
+  border: .0625rem solid transparent;
 
   &.type-outlined {
-    border: 1px solid var(--color-emphasis-2);
+    border-color: var(--color-emphasis-2);
   }
-
-  &.type-filled {
-    border: 1px solid var(--color-emphasis-2);
-  }
-
+  
   &.type-elevated {
     @include elevation.get(1);
   }
