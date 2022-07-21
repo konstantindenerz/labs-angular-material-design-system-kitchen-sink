@@ -1,10 +1,19 @@
-<ng-container *ngFor="let color of colors">
-  <div class="item">
-    <div class="row">
-      <div class="key"><strong>{{color.key}}:</strong>{{color.value}}</div>
-      <div class="value" [style.background-color]="'var(' + color.key + ')'">
+<div class="group" *ngFor="let group of groups">
+  <div class="label">{{group.key}}</div>
+  <div class="items">
+    <div class="card" *ngFor="let color of group.colors">
+      <div class="color" [style.color]="'var(' + color.key + ')'" [title]="'The current color:' + color.value"></div>
+      <div class="description">
+        <div class="key" title="The CSS variable name">{{color.key}}</div>
+        <div class="value" title="The CSS variable value">{{color.value}}</div>
+        <div class="text" title="Description">{{color.description}}</div>
       </div>
     </div>
-    <div class="description" *ngIf="color.description" [innerHTML]="color.description"></div>
   </div>
-</ng-container>
+  <!--    <div class="row">-->
+  <!--      <div class="key"><strong>{{color.key}}:</strong>{{color.value}}</div>-->
+  <!--      <div class="value" [style.background-color]="'var(' + color.key + ')'">-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--    <div class="description" *ngIf="color.description" [innerHTML]="color.description"></div>-->
+</div>

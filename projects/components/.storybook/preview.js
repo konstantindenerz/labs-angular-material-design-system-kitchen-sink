@@ -47,6 +47,10 @@ export const parameters = {
         name: 'background',
         value: 'var(--color-background)',
       },
+      {
+        name: 'system',
+        value: 'var(--color-system-background)',
+      },
     ],
   },
   viewport: {

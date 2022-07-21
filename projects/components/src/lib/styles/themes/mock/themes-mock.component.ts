@@ -1,5 +1,5 @@
 import {Component, ElementRef, OnInit} from '@angular/core';
-import {COLORS} from './color-mapping';
+import {ColorGroup, COLORS, GROUPS} from './color-mapping';
 
 @Component({
   selector: 'themes-mock',
@@ -8,16 +8,16 @@ import {COLORS} from './color-mapping';
 })
 
 export class ThemesMockComponent implements OnInit {
-  readonly colors = COLORS;
+  readonly groups: ColorGroup[] = [];
 
   constructor(private readonly elementRef: ElementRef,) {
-    const colors = COLORS;
+    const groups = GROUPS;
     const element = elementRef.nativeElement;
     const style = getComputedStyle(element);
-    colors.forEach(color => {
-      color.value = style.getPropertyValue(color.key);
+    groups.forEach(group => {
+      group.colors.forEach(color => color.value = style.getPropertyValue(color.key));
     })
-    this.colors = colors;
+    this.groups = groups;
   }
 
   ngOnInit() {
