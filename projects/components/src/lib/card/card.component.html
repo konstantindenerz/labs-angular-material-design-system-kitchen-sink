@@ -6,7 +6,7 @@
 <div class="content">
   <ng-content></ng-content>
 </div>
-<div *ngIf="actions?.length >0" class="actions">
+<div *ngIf="actions" class="actions">
   <ng-container *ngFor="let action of actions">
     <labs-button (click)="action.action()">{{action.title}}</labs-button>
   </ng-container>
