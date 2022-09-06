@@ -1,8 +1,8 @@
 export interface Talk {
   title: string;
   conference: string;
-  startDate: Date;
-  endDate: Date;
+  startDate: string;
+  endDate: string;
   location: string;
   country: string;
   bannerImageSrc?: string;
