@@ -1,6 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 :host {
+  // Overrides
   --app-logo: url('assets/logo.svg');
+  --xl-gap: 1.5rem;
+  --l-gap: 1.25rem;
+  --m-gap: 1rem;
+  --s-gap: 0.5rem;
+  --xs-gap: 0.25rem;
 }
 
 body {

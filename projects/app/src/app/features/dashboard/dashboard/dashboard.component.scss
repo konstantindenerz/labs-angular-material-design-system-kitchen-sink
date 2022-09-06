@@ -1,0 +1,55 @@
+@use 'breakpoints';
+@use 'typography';
+
+:host {
+  width: 100%;
+  height: calc(100% - 4rem);
+  display: grid;
+  grid-template-areas:  "title title title title"
+                        "talks creation creation webinars"
+                        "talks  article article contentmix";
+  grid-template-rows: min-content auto;
+  grid-template-columns: auto;
+  gap: var(--gap-l);
+  padding: var(--gap-l) var(--gap-l) var(--gap-l) 0;
+
+  h1 {
+    height: min-content;
+    grid-area: title;
+    margin: 0;
+    @include typography.headline-l
+  }
+
+  .talks {
+    grid-area: talks;
+  }
+
+  labs-content-creation-overview {
+    grid-area: creation
+  }
+
+  labs-articles-overview {
+    grid-area: article;
+  }
+
+  .webinars {
+    grid-area: webinars;
+  }
+
+  labs-conten-mix {
+    grid-area: contentmix;
+  }
+
+  @include breakpoints.m {
+    grid-template-areas:  "title title title "
+                        "talks creation  webinars"
+                        "talks  article  contentmix";
+    grid-template-columns: 1fr 1.5fr 1fr;
+  }
+
+  @include breakpoints.use(s, xs) {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-m);
+  }
+}
