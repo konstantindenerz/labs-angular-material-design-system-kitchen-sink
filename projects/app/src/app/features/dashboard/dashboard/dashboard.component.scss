@@ -1,5 +1,4 @@
 @use 'breakpoints';
-@use 'typography';
 
 :host {
   width: 100%;
@@ -17,7 +16,6 @@
     height: min-content;
     grid-area: title;
     margin: 0;
-    @include typography.headline-l
   }
 
   .talks {

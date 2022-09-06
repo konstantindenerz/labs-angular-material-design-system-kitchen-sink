@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {TalksService} from "../talks.service";
+import {Observable} from "rxjs";
+import {Talk} from "../model/talk.model";
 
 @Component({
   selector: 'labs-talk-list',
@@ -7,7 +10,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TalkListComponent implements OnInit {
 
-  constructor() { }
+  talks$: Observable<Talk[]> = this.talksService.getUpcomingTalks()
+
+  constructor(private readonly talksService: TalksService) {
+  }
 
   ngOnInit(): void {
   }

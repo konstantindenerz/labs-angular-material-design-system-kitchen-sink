@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
+import {Talk} from "../../model/talk.model";
 
 @Component({
   selector: 'labs-talk-list-item',
   templateUrl: './talk-list-item.component.html',
-  styleUrls: ['./talk-list-item.component.scss']
+  styleUrls: ['./talk-list-item.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TalkListItemComponent implements OnInit {
+export class TalkListItemComponent {
 
-  constructor() { }
+  @Input() talk: Talk = {} as Talk;
 
-  ngOnInit(): void {
+  constructor() {
   }
 
 }
