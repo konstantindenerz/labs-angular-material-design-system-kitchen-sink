@@ -1,3 +1,4 @@
+@use "typography";
 /* You can add global styles to this file, and also import other style files */
 :host {
   // Overrides
@@ -11,4 +12,12 @@
 
 body {
   margin: 0;
+}
+
+h1 {
+  @include typography.title-l;
+}
+
+h2 {
+  @include typography.title-m;
 }
