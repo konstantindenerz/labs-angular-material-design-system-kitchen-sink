@@ -11,7 +11,8 @@ import {ButtonModule} from "../button/button.module";
   imports: [
     CommonModule,
     ButtonModule,
-  ]
+  ],
+  exports: [CardComponent]
 })
 export class CardModule {
 }

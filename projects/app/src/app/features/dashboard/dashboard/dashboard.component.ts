@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {TalksService} from "../../talks/talks.service";
+import {Observable} from "rxjs";
+import {Talk} from "../../talks/model/talk.model";
+import {map} from "rxjs/operators";
 
 @Component({
   selector: 'labs-dashboard',
@@ -7,7 +11,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  talks$: Observable<Talk[]> = this.talksService.getUpcomingTalks();
+  myTalks$: Observable<Talk[]> = this.talks$.pipe(map(talks => talks.slice(0, 2)));
+
+
+  constructor(private readonly talksService: TalksService) {
+  }
 
   ngOnInit(): void {
   }

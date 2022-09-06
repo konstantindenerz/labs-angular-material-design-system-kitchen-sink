@@ -1,21 +1,14 @@
-import {Component, OnInit} from '@angular/core';
-import {TalksService} from "../talks.service";
-import {Observable} from "rxjs";
+import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
 import {Talk} from "../model/talk.model";
 
 @Component({
   selector: 'labs-talk-list',
   templateUrl: './talk-list.component.html',
-  styleUrls: ['./talk-list.component.scss']
+  styleUrls: ['./talk-list.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TalkListComponent implements OnInit {
+export class TalkListComponent {
 
-  talks$: Observable<Talk[]> = this.talksService.getUpcomingTalks()
-
-  constructor(private readonly talksService: TalksService) {
-  }
-
-  ngOnInit(): void {
-  }
+  @Input() talks: Talk[] = [];
 
 }

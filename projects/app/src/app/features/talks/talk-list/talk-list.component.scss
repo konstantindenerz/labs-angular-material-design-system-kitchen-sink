@@ -1,4 +1,20 @@
-
 :host {
+  height: 100%;
   background-color: green;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xl);
+  overflow: hidden;
+}
+
+h2 {
+  height: min-content;
+  margin: 0;
+}
+
+.scroll-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xl);
+  overflow-y: auto;
 }
