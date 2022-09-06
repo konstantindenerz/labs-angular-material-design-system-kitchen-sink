@@ -11,6 +11,10 @@ const routes: Routes = [
     path: 'talks',
     loadChildren: async () => (await import('./features/articles/articles.module')).ArticlesModule
   },
+  {
+    path: 'articles',
+    loadChildren: async () => (await import('./features/talks/talks.module')).TalksModule
+  },
 ];
 
 @NgModule({
