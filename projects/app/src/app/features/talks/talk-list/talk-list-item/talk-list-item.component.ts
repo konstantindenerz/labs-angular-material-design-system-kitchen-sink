@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
 import {Talk} from "../../model/talk.model";
 
 @Component({
@@ -7,11 +7,13 @@ import {Talk} from "../../model/talk.model";
   styleUrls: ['./talk-list-item.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TalkListItemComponent {
+export class TalkListItemComponent implements OnInit {
 
   @Input() talk: Talk = {} as Talk;
+  subTitle = ''
 
-  constructor() {
+  ngOnInit() {
+    this.subTitle = `${this.talk.conference} | ${this.talk.startDate} - ${this.talk.endDate} @ ${this.talk.location} (${this.talk.country})`;
   }
 
 }
