@@ -7,6 +7,10 @@ const routes: Routes = [
     path: 'dashboard',
     loadChildren: async () => (await import('./features/dashboard/dashboard.module')).DashboardModule
   },
+  {
+    path: 'talks',
+    loadChildren: async () => (await import('./features/articles/articles.module')).ArticlesModule
+  },
 ];
 
 @NgModule({

@@ -2,10 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { TalksRoutingModule } from './talks-routing.module';
+import { TalksComponent } from './talks/talks.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    TalksComponent
+  ],
   imports: [
     CommonModule,
     TalksRoutingModule
