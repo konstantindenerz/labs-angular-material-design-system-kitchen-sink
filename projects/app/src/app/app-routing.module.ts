@@ -8,11 +8,11 @@ const routes: Routes = [
     loadChildren: async () => (await import('./features/dashboard/dashboard.module')).DashboardModule
   },
   {
-    path: 'talks',
+    path: 'articles',
     loadChildren: async () => (await import('./features/articles/articles.module')).ArticlesModule
   },
   {
-    path: 'articles',
+    path: 'talks',
     loadChildren: async () => (await import('./features/talks/talks.module')).TalksModule
   },
   {
