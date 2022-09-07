@@ -9,6 +9,7 @@ import {TalksModule} from "../talks/talks.module";
 import {ArticlesModule} from "../articles/articles.module";
 import {DashListComponent} from './dash-list/dash-list.component';
 import {ButtonModule} from "../../../../../components/src/lib/button/button.module";
+import {ChartsModule} from "../charts/charts.module";
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import {ButtonModule} from "../../../../../components/src/lib/button/button.modu
     DashboardRoutingModule,
     TalksModule,
     ArticlesModule,
-    ButtonModule
+    ButtonModule,
+    ChartsModule
   ]
 })
 export class DashboardModule {

@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { DoughnutComponent } from './doughnut/doughnut.component';
-
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {DoughnutComponent} from './doughnut/doughnut.component';
+import {NgChartsModule} from "ng2-charts";
 
 
 @NgModule({
@@ -9,7 +9,10 @@ import { DoughnutComponent } from './doughnut/doughnut.component';
     DoughnutComponent
   ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    NgChartsModule
+  ],
+  exports: [DoughnutComponent]
 })
-export class ChartsModule { }
+export class ChartsModule {
+}

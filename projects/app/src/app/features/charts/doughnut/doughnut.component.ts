@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ChartConfiguration} from "chart.js";
 
 @Component({
   selector: 'labs-doughnut',
@@ -7,7 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DoughnutComponent implements OnInit {
 
-  constructor() { }
+
+  public doughnutChartLabels: string[] = ['Artikel', 'Webinare', 'Talks'];
+  public doughnutChartDatasets = [{
+    data: [4, 6, 10]
+  }];
+
+  public doughnutChartOptions: ChartConfiguration<'doughnut'>['options'] = {
+    responsive: true,
+    maintainAspectRatio: true,
+  };
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
