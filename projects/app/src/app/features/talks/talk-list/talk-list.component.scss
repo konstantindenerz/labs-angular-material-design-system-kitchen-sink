@@ -1,3 +1,5 @@
+@use 'breakpoints';
+
 :host {
   height: 100%;
   display: flex;
@@ -16,4 +18,8 @@ h2 {
   flex-direction: column;
   gap: var(--gap-xl);
   overflow-y: auto;
+
+  @include breakpoints.use(s, xs) {
+    flex-direction: row;
+  }
 }
