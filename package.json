@@ -23,7 +23,8 @@
     "@angular/router": "^14.0.0",
     "@fortawesome/angular-fontawesome": "^0.11.1",
     "@fortawesome/free-regular-svg-icons": "^6.1.1",
-    "chart.js": "^3.9.1",
+    "chart.js": "^3.6.0",
+    "ng2-charts": "^4.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
