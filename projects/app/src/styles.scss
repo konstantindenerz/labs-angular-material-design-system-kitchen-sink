@@ -3,8 +3,8 @@
 :host {
   // Overrides
   --app-logo: url('assets/logo.svg');
-  --xl-gap: 1.5rem;
-  --l-gap: 1.25rem;
+  --xl-gap: 2rem;
+  --l-gap: 1.5rem;
   --m-gap: 1rem;
   --s-gap: 0.5rem;
   --xs-gap: 0.25rem;
@@ -15,9 +15,11 @@ body {
 }
 
 h1 {
-  @include typography.title-l;
+  @include typography.display-m;
+  font-weight: lighter;
 }
 
 h2 {
-  @include typography.title-m;
+  @include typography.title-l;
+  font-weight: normal;
 }
