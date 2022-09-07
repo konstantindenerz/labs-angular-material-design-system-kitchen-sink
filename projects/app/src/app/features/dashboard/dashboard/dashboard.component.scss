@@ -1,20 +1,26 @@
 @use 'breakpoints';
 
 :host {
+  display: block;
   width: 100%;
   height: calc(100% - 4rem);
-  display: grid;
-  grid-template-areas:  "title title title title"
+  padding: var(--gap-l) 3.5rem var(--gap-l) 0;
+
+  .grid {
+    height: calc(100% - 8rem);
+    display: grid;
+    grid-template-areas:
                         "talks creation creation webinars"
                         "talks  article article contentmix";
-  grid-template-rows: min-content auto;
-  grid-template-columns: auto;
-  gap: var(--gap-l);
-  padding: var(--gap-l) var(--gap-l) var(--gap-l) 0;
+    grid-template-rows:  repeat(2, 1fr);
+    grid-template-columns: repeat( 4, minmax(0, 1fr));
+    gap: var(--gap-l);
+    padding-top: var(--gap-xl);
+  }
+
 
   h1 {
     height: min-content;
-    grid-area: title;
     margin: 0;
   }
 
@@ -39,15 +45,28 @@
   }
 
   @include breakpoints.m {
-    grid-template-areas:  "title title title "
+    .grid {
+      grid-template-areas:
                         "talks creation  webinars"
                         "talks  article  contentmix";
-    grid-template-columns: 1fr 1.5fr 1fr;
+      grid-template-columns: 1fr 1.5fr 1fr;
+    }
+
   }
 
   @include breakpoints.use(s, xs) {
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap-m);
+    padding: var(--gap-m) var(--gap-m) 0 var(--gap-m);
+    .grid {
+      grid-template-areas: revert;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, minmax(max-content, 1fr));
+      gap: var(--gap-xl);
+
+      > * {
+        grid-area: unset;
+      }
+    }
+
+
   }
 }

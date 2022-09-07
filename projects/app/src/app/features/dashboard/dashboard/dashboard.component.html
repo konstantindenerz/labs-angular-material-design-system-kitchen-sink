@@ -1,6 +1,9 @@
 <h1>Dashboard</h1>
-<labs-talk-list class="talks" [talks]="(talks$ |async) ?? []"></labs-talk-list>
-<labs-content-creation-overview></labs-content-creation-overview>
-<labs-articles-overview></labs-articles-overview>
-<labs-talk-list class="webinars" [talks]="(myTalks$| async) ?? []"></labs-talk-list>
-<labs-conten-mix></labs-conten-mix>
+<div class="grid">
+  <labs-talk-list class="talks" [talks]="(talks$ |async) ?? []"></labs-talk-list>
+  <labs-content-creation-overview></labs-content-creation-overview>
+  <labs-articles-overview></labs-articles-overview>
+  <labs-talk-list class="webinars" [talks]="(myTalks$| async) ?? []"></labs-talk-list>
+  <labs-conten-mix></labs-conten-mix>
+</div>
+
