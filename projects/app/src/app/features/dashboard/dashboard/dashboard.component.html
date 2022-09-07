@@ -1,9 +1,15 @@
 <h1>Dashboard</h1>
 <div class="grid">
-  <labs-talk-list class="talks" [talks]="(talks$ |async) ?? []"></labs-talk-list>
+  <labs-dash-list class="talks" title="Nächste Talks" [showAllRoute]="['/talks']"
+                  [dataSource]="(talks$ |async) ?? []" [listItemTemplate]="talkTemplate"></labs-dash-list>
   <labs-content-creation-overview></labs-content-creation-overview>
   <labs-articles-overview></labs-articles-overview>
-  <labs-talk-list class="webinars" [talks]="(myTalks$| async) ?? []"></labs-talk-list>
+
+  <labs-dash-list class="webinars" title="Nächste Webinars" [showAllRoute]="['/webinars']"
+                  [dataSource]="(myTalks$| async) ?? []" [listItemTemplate]="talkTemplate"></labs-dash-list>
   <labs-conten-mix></labs-conten-mix>
 </div>
 
+<ng-template #talkTemplate let-item>
+  <labs-talk-list-item [talk]="item"></labs-talk-list-item>
+</ng-template>

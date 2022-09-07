@@ -1,0 +1,15 @@
+<h2>{{title}}</h2>
+<div class="scroll-container">
+  <div *ngIf="dataSource?.length === 0">
+    Keine Einträge gefunden
+  </div>
+  <ng-container *ngIf="dataSource?.length !== 0">
+    <ng-container *ngFor="let item of dataSource">
+      <ng-template #defaultTemplate let-defaultItem>{{ defaultItem }}</ng-template>
+      <ng-container *ngTemplateOutlet="listItemTemplate ?? defaultTemplate; context:{$implicit: item}"></ng-container>
+    </ng-container>
+  </ng-container>
+</div>
+<div *ngIf="showAllRoute.length > 0" class="btn-container">
+  <labs-button type="filled" [routerLink]="showAllRoute">Alle sehen</labs-button>
+</div>

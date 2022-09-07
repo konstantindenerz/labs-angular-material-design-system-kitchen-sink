@@ -23,3 +23,13 @@ h2 {
     flex-direction: row;
   }
 }
+
+.btn-container {
+  background-color: var(--color-background);
+  display: flex;
+  justify-content: center;
+
+  @include breakpoints.use(s, xs) {
+    justify-content: flex-end;
+  }
+}

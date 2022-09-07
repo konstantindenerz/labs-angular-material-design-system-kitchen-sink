@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
-import {Talk} from "../../model/talk.model";
+import {Talk} from "../model/talk.model";
 
 @Component({
   selector: 'labs-talk-list-item',
@@ -13,7 +13,9 @@ export class TalkListItemComponent implements OnInit {
   subTitle = ''
 
   ngOnInit() {
-    this.subTitle = `${this.talk.conference} | ${this.talk.startDate} - ${this.talk.endDate} @ ${this.talk.location} (${this.talk.country})`;
+    if (this.talk) {
+      this.subTitle = `${this.talk.conference} | ${this.talk.startDate} - ${this.talk.endDate} @ ${this.talk.location} (${this.talk.country})`;
+    }
   }
 
 }
