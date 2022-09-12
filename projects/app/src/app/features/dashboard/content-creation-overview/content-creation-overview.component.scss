@@ -1,3 +1,9 @@
 :host {
-  background-color: lightcoral;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xl);
+}
+
+h2 {
+  margin: 0
 }
