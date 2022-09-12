@@ -34,6 +34,10 @@
   --state-dragged-alpha: calc(.18 + var(--primary-constrast-patch, 0));
   --state-selected-alpha: calc(.18 + var(--primary-constrast-patch, 0));
   --state-disabled-alpha: calc(.38 + var(--primary-constrast-patch, 0));
+
+  --color-scrollbar-thumb: rgba(255, 255, 255, 0.5);
+  --color-scrollbar-thumb-hover: rgba(255, 255, 255, 0.6);
+  --color-scrollbar-track: rgba(255, 255, 255, 0.12);
 }
 
 @mixin more-contrast {

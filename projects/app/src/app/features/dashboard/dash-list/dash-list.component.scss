@@ -19,6 +19,10 @@ h2 {
   gap: var(--gap-xl);
   overflow-y: auto;
 
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   @include breakpoints.use(s, xs) {
     flex-direction: row;
   }

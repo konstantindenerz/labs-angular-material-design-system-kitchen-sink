@@ -8,6 +8,8 @@
   --m-gap: 1rem;
   --s-gap: 0.5rem;
   --xs-gap: 0.25rem;
+
+
 }
 
 body {
@@ -22,4 +24,35 @@ h1 {
 h2 {
   @include typography.title-l;
   font-weight: normal;
+}
+
+/*
+* Custom Scroll-Bar Style, für alle Plattformen.
+*/
+* {
+  /* firefox */
+  scrollbar-color: var(--color-scrollbar-thumb) transparent;
+  scrollbar-width: thin;
+
+  /* chromium safari*/
+  &::-webkit-scrollbar-track {
+    background-color: var(--color-scrollbar-track);
+    border-bottom-right-radius: var(--scrollbar-bottom-radius, var(--scrollbar-thumb-radius));
+    border-top-right-radius: var(--scrollbar-top-radius, var(--scrollbar-thumb-radius));
+    overflow: hidden;
+  }
+
+  &::-webkit-scrollbar {
+    width: var(--scrollbar-width);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: solid 2px transparent;
+    border-radius: var(--scrollbar-thumb-radius);
+    box-shadow: inset 0 0 var(--scrollbar-width) var(--scrollbar-width) var(--color-scrollbar-thumb);
+
+    &:hover {
+      box-shadow: inset 0 0 var(--scrollbar-width) var(--scrollbar-width) var(--color-scrollbar-thumb-hover);
+    }
+  }
 }
