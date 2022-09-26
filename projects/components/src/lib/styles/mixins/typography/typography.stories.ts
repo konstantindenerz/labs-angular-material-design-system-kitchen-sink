@@ -14,5 +14,16 @@ const Template: Story<TypographyComponent> = (props: TypographyComponent) => ({
   props,
 });
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Light = Template.bind({});
+Light.parameters = {
+  themes: {
+    default: 'light'
+  }
+}
+
+export const Dark = Template.bind({});
+Dark.parameters = {
+  themes: {
+    default: 'dark'
+  }
+}
