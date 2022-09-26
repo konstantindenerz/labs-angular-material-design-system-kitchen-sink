@@ -7,6 +7,14 @@
   background-color: var(--color-surface);
   border-radius: var(--border-radius-m);
   padding: var(--gap-l);
+
+  > div {
+    &:nth-child(2) {
+      border-top: 1px dotted var(--color-emphasis-2);
+      border-bottom: 1px dotted var(--color-emphasis-2);
+      padding: 1rem 0;
+    }
+  }
 }
 
 :host {
