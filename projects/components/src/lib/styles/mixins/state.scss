@@ -19,6 +19,7 @@
 }
 
 @mixin dragged($scale: 1) {
+  @include elevation.get(8);
   @include overlay.create(var(--state-dragged-alpha), $scale);
 }
 

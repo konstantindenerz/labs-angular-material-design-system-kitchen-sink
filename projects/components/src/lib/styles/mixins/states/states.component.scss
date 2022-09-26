@@ -1,0 +1,58 @@
+@use 'state';
+
+.surface {
+  width: 100%;
+  height: 4rem;
+  background-color: var(--color-surface);
+  display: grid;
+  color: var(--color-on-surface);
+  place-items: center;
+
+  &.interactive:not(.primary) {
+    @include state.interactive;
+  }
+
+  &.interactive.primary {
+    @include state.interactive-primary;
+  }
+
+  &.hover {
+    @include state.hover();
+  }
+
+  &.focussed {
+    @include state.focused();
+  }
+
+  &.selected {
+    @include state.selected();
+  }
+
+  &.pressed {
+    @include state.pressed();
+  }
+
+  &.dragged {
+    @include state.dragged();
+  }
+
+  &.disabled {
+    @include state.disabled();
+  }
+}
+
+.circle-surface {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
+    &.interactive {
+      @include state.interactive-circle();
+    }
+}
+
+:host {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  gap: var(--gap-xl);
+}
