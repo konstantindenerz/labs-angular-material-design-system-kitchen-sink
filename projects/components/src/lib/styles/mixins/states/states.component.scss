@@ -8,6 +8,10 @@
   color: var(--color-on-surface);
   place-items: center;
 
+  &.transparent {
+    background-color: transparent;
+  }
+
   &.interactive:not(.primary) {
     @include state.interactive;
   }
@@ -46,9 +50,10 @@
   height: 2.5rem;
   display: grid;
   place-items: center;
-    &.interactive {
-      @include state.interactive-circle();
-    }
+
+  &.interactive {
+    @include state.interactive-circle();
+  }
 }
 
 :host {
